@@ -18,6 +18,11 @@ var products = []Product{
 	{ID: "2", Name: "Mouse", Price: 20},
 }
 
+func HomeHandler(w http.ResponseWriter, r *http.Request) {
+	w.WriteHeader(http.StatusOK)
+	w.Write([]byte("Welcome to the eCommerce API"))
+}
+
 // GetProducts returns a list of products
 func GetProducts(w http.ResponseWriter, r *http.Request) {
 	// Set the header
